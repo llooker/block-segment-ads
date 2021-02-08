@@ -23,7 +23,7 @@
 },
 "models": [
   {
-    "name": "block_segment_ads",
+    "name": "block_segment_facebook_ads",
     "connection_constant": "CONNECTION_NAME"
   }
 ],
