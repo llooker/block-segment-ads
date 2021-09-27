@@ -1,0 +1,38 @@
+{
+  "label": "Segment Ads",
+  "category_label": "Models",
+  "branding": {
+    "image_uri": "https://braze-marketing-assets.s3.amazonaws.com/images/partner_logos/segment.png",
+    "tagline": "Go beyond Google AdWords and Facebook Ads dashboards and ask any question you want about your advertising data. Load your ads data into a data warehouse with Segment and use the Facebook Ads and Google AdWords Block by Segment to analyze the performance of one or both of your ads sources."
+  },
+
+"constants": {
+  "CONNECTION_NAME": {
+    "label": "Connection Name",
+    "value_constraint": "connection"
+  },
+  "CONFIG_PROJECT_NAME": {
+    "label": "Config Project Name"
+  },
+  "FACEBOOK_ADS_SCHEMA_NAME": {
+    "label": "Facebook Ads Schema Name"
+  },
+  "GOOGLE_ADWORDS_SCHEMA_NAME": {
+    "label": "Google Adwords Schema Name"
+  }
+},
+"models": [
+  {
+    "name": "block_segment_facebook_ads",
+    "connection_constant": "CONNECTION_NAME"
+  }
+],
+"auxiliary_projects": [
+    {
+      "git_uri": "git://github.com/llooker/block-segment-ads-config.git",
+      "git_ref": "d3ce13f95f31afbecbb9ef924ea8e66b50bc48db",
+      "label": "Segment Ads Config",
+      "constant_name": "CONFIG_PROJECT_NAME"
+    }
+  ]
+}
