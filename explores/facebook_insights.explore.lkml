@@ -1,9 +1,9 @@
-explore: facebook_ads_core {
-  hidden:yes
-  extension: required
-  join: facebook_campaigns {
+include: "/views/*.view"
+
+explore: facebook_insights {
+  join: facebook_ads {
     type: left_outer
-    sql_on: ${facebook_ads.campaign_id} = ${facebook_campaigns.id} ;;
+    sql_on: ${facebook_insights.ad_id} = ${facebook_ads.id} ;;
     relationship: many_to_one
   }
 
@@ -13,9 +13,9 @@ explore: facebook_ads_core {
     relationship: many_to_one
   }
 
-  join: facebook_insights {
+  join: facebook_campaigns {
     type: left_outer
-    sql_on: ${facebook_ads.id} = ${facebook_insights.ad_id} ;;
+    sql_on: ${facebook_ads.campaign_id} = ${facebook_campaigns.id} ;;
     relationship: many_to_one
   }
 }

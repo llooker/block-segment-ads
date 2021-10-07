@@ -1,10 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/facebook_ads.view"
-
 view: facebook_ads {
-  extends: [facebook_ads_config]
-}
-
-view: facebook_ads_core {
   sql_table_name: @{FACEBOOK_ADS_SCHEMA_NAME}.ads ;;
 
   dimension: id {

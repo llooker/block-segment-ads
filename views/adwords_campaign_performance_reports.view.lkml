@@ -1,10 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/adwords_campaign_performance_reports.view.lkml"
-
 view: adwords_campaign_performance_reports {
-  extends: [adwords_campaign_performance_reports_config]
-}
-
-view: adwords_campaign_performance_reports_core {
   sql_table_name: @{GOOGLE_ADWORDS_SCHEMA_NAME}.campaign_performance_reports ;;
 
   dimension: id {

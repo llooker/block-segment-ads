@@ -1,10 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/combined_ads_compare.view.lkml"
-
 view: combined_ads_compare {
-  extends: [combined_ads_compare_config]
-}
-
-view: combined_ads_compare_core {
   derived_table: {
     sql: with
       fb_perf as (

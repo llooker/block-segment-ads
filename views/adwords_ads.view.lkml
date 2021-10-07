@@ -1,10 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/adwords_ads.view.lkml"
-
 view: adwords_ads {
-  extends: [adwords_ads_config]
-}
-
-view: adwords_ads_core {
   sql_table_name: @{GOOGLE_ADWORDS_SCHEMA_NAME}.ads ;;
 
   dimension: id {

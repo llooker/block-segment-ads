@@ -1,10 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/adwords_ad_performance_reports.view.lkml"
-
 view: adwords_ad_performance_reports {
-  extends: [adwords_ad_performance_reports_config]
-}
-
-view: adwords_ad_performance_reports_core {
   sql_table_name: @{GOOGLE_ADWORDS_SCHEMA_NAME}.ad_performance_reports ;;
 
 ##### This table is ad performance, segmented by day #####
