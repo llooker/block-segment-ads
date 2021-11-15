@@ -1,6 +1,6 @@
-explore: adwords_campaign_performance_reports_core {
-  hidden:yes
-  extension: required
+include: "/views/*.view"
+
+explore: adwords_campaign_performance_reports {
   join: adwords_campaigns {
     relationship: many_to_one
     sql_on: ${adwords_campaign_performance_reports.campaign_id} = ${adwords_campaigns.id} ;;

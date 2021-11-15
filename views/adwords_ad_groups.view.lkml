@@ -1,10 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/adwords_ad_groups.view.lkml"
-
 view: adwords_ad_groups {
-  extends: [adwords_ad_groups_config]
-}
-
-view: adwords_ad_groups_core {
   sql_table_name: @{GOOGLE_ADWORDS_SCHEMA_NAME}.ad_groups ;;
 
   dimension: id {

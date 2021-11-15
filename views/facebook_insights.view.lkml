@@ -1,10 +1,4 @@
-include: "//@{CONFIG_PROJECT_NAME}/facebook_insights.view"
-
 view: facebook_insights {
-  extends: [facebook_insights_config]
-}
-
-view: facebook_insights_core {
   sql_table_name: @{FACEBOOK_ADS_SCHEMA_NAME}.insights ;;
 
   dimension: id {
